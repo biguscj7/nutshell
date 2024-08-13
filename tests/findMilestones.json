@@ -1,0 +1,70 @@
+{
+  "result": [
+    {
+      "id": 327,
+      "entityType": "Milestones",
+      "rev": "1",
+      "name": "New lead \/ referral",
+      "position": 1,
+      "stagesetId": 71
+    },
+    {
+      "id": 331,
+      "entityType": "Milestones",
+      "rev": "3",
+      "name": "Make Contact",
+      "position": 2,
+      "stagesetId": 71
+    },
+    {
+      "id": 335,
+      "entityType": "Milestones",
+      "rev": "2",
+      "name": "Consult",
+      "position": 3,
+      "stagesetId": 71
+    },
+    {
+      "id": 339,
+      "entityType": "Milestones",
+      "rev": "4",
+      "name": "Create & Deliver Proposal",
+      "position": 4,
+      "stagesetId": 71
+    },
+    {
+      "id": 351,
+      "entityType": "Milestones",
+      "rev": "6",
+      "name": "Revise Proposal - C",
+      "position": 5,
+      "stagesetId": 71
+    },
+    {
+      "id": 355,
+      "entityType": "Milestones",
+      "rev": "2",
+      "name": "Schedule & secure funding - B",
+      "position": 6,
+      "stagesetId": 71
+    },
+    {
+      "id": 343,
+      "entityType": "Milestones",
+      "rev": "2",
+      "name": "Close - A",
+      "position": 7,
+      "stagesetId": 71
+    },
+    {
+      "id": 459,
+      "entityType": "Milestones",
+      "rev": "0",
+      "name": "Hot Win!",
+      "position": 8,
+      "stagesetId": 71
+    }
+  ],
+  "id": "apeye",
+  "error": null
+}

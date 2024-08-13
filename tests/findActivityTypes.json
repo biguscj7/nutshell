@@ -1,0 +1,48 @@
+{
+  "result": [
+    {
+      "stub": true,
+      "id": 1,
+      "rev": "1",
+      "entityType": "Activity_Types",
+      "name": "Phone Call / Meeting"
+    },
+    {
+      "stub": true,
+      "id": 2,
+      "rev": "5",
+      "entityType": "Activity_Types",
+      "name": "Unnamed activity type"
+    },
+    {
+      "stub": true,
+      "id": 3,
+      "rev": "3",
+      "entityType": "Activity_Types",
+      "name": "Email/Log"
+    },
+    {
+      "stub": true,
+      "id": 103,
+      "rev": "1",
+      "entityType": "Activity_Types",
+      "name": "Elevated Conversations / Leader Intros"
+    },
+    {
+      "stub": true,
+      "id": 91,
+      "rev": "0",
+      "entityType": "Activity_Types",
+      "name": "New Intros"
+    },
+    {
+      "stub": true,
+      "id": 15,
+      "rev": "0",
+      "entityType": "Activity_Types",
+      "name": "Quotes Sent"
+    }
+  ],
+  "id": "apeye",
+  "jsonrpc": "2.0"
+}

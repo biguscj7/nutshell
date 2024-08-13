@@ -1,0 +1,28 @@
+{
+  "result": [
+    {
+      "stub": true,
+      "id": 15739,
+      "rev": "85",
+      "entityType": "Leads",
+      "modifiedTime": "2024-04-03T00:24:02+0000",
+      "createdTime": "2023-02-27T16:51:57+0000",
+      "name": "Lead-4686",
+      "description": "BestBuy \/ 2 DAY \/ Vicki Taylor",
+      "status": 0,
+      "completion": 72,
+      "value": {
+        "currency": "USD",
+        "amount": 24999
+      },
+      "primaryAccountName": "SOCOM",
+      "primaryContactName": "Vicki Taylor",
+      "isOverdue": true,
+      "lastContactedDate": "2024-04-02T22:47:51+0000",
+      "dueTime": "2024-05-31T15:51:00+0000",
+      "nextStepDueTime": "2023-07-29T20:57:33+0000"
+    }
+  ],
+  "id": "apeye",
+  "error": null
+}

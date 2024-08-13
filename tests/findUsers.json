@@ -1,0 +1,48 @@
+{
+  "result": [
+    {
+      "stub": true,
+      "id": 131,
+      "rev": "8",
+      "entityType": "Users",
+      "modifiedTime": "2024-01-17T19:12:05+0000",
+      "createdTime": "2021-11-15T16:42:22+0000",
+      "name": "Chris Rock",
+      "emails": [
+        "crock@mail.com"
+      ],
+      "isEnabled": true,
+      "isAdministrator": true
+    },
+    {
+      "stub": true,
+      "id": 155,
+      "rev": "2",
+      "entityType": "Users",
+      "modifiedTime": "2023-09-21T16:34:56+0000",
+      "createdTime": "2022-10-18T14:35:56+0000",
+      "name": "Dwayne Johnson",
+      "emails": [
+        "djohnson@mail.com"
+      ],
+      "isEnabled": true,
+      "isAdministrator": false
+    },
+    {
+      "stub": true,
+      "id": 103,
+      "rev": "7",
+      "entityType": "Users",
+      "modifiedTime": "2024-02-08T14:24:14+0000",
+      "createdTime": "2020-09-11T19:03:23+0000",
+      "name": "John Cena",
+      "emails": [
+        "jcena@mail.com"
+      ],
+      "isEnabled": true,
+      "isAdministrator": true
+    }
+  ],
+  "id": "apeye",
+  "error": null
+}

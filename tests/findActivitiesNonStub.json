@@ -1,0 +1,168 @@
+{
+  "result": [
+    {
+      "id": 78131,
+      "entityType": "Activities",
+      "rev": "5",
+      "modifiedTime": "2024-03-20T22:50:06+0000",
+      "createdTime": "2024-02-21T21:22:07+0000",
+      "name": "BRIEF 101 Training:  Going Deeper with BRIEF (Cohort 1)",
+      "description": "Going Deeper with BRIEF",
+      "activityType": {
+        "stub": true,
+        "id": 2,
+        "rev": "7",
+        "entityType": "Activity_Types",
+        "name": "Quotes Sent"
+      },
+      "lead": null,
+      "leads": [],
+      "startTime": "2024-06-06T14:00:00+0000",
+      "endTime": "2024-06-06T16:30:00+0000",
+      "isAllDay": false,
+      "isTimed": true,
+      "isFlagged": false,
+      "status": -1,
+      "loggedBy": null,
+      "participants": [
+        {
+          "stub": true,
+          "id": 156843,
+          "rev": "1",
+          "entityType": "Contacts",
+          "modifiedTime": "2024-02-21T14:52:18+0000",
+          "createdTime": "2024-02-21T14:52:18+0000",
+          "name": "Pat McEnroe",
+          "jobTitle": "",
+          "status": 3
+        },
+        {
+          "stub": true,
+          "id": 13,
+          "rev": "16",
+          "entityType": "Users",
+          "modifiedTime": "2023-09-21T16:34:56+0000",
+          "createdTime": "2016-06-29T18:23:27+0000",
+          "name": "Test person",
+          "emails": [
+            "test@test.com"
+          ],
+          "isEnabled": true,
+          "isAdministrator": true,
+          "status": 3
+        }
+      ],
+      "logDescription": null
+    },
+    {
+      "id": 78171,
+      "entityType": "Activities",
+      "rev": "5",
+      "modifiedTime": "2024-03-20T22:50:06+0000",
+      "createdTime": "2024-02-22T15:37:14+0000",
+      "name": "BRIEF 101 Training:  Going Deeper with BRIEF (Cohort 2)",
+      "description": "Going Deeper with BRIEF",
+      "activityType": {
+        "stub": true,
+        "id": 2,
+        "rev": "7",
+        "entityType": "Activity_Types",
+        "name": "Quotes Sent"
+      },
+      "lead": null,
+      "leads": [],
+      "startTime": "2024-06-05T13:00:00+0000",
+      "endTime": "2024-06-05T15:30:00+0000",
+      "isAllDay": false,
+      "isTimed": true,
+      "isFlagged": false,
+      "status": -1,
+      "loggedBy": null,
+      "participants": [
+        {
+          "stub": true,
+          "id": 156843,
+          "rev": "1",
+          "entityType": "Contacts",
+          "modifiedTime": "2024-02-21T14:52:18+0000",
+          "createdTime": "2024-02-21T14:52:18+0000",
+          "name": "Pat McEnroe",
+          "jobTitle": "",
+          "status": 3
+        },
+        {
+          "stub": true,
+          "id": 13,
+          "rev": "16",
+          "entityType": "Users",
+          "modifiedTime": "2023-09-21T16:34:56+0000",
+          "createdTime": "2016-06-29T18:23:27+0000",
+          "name": "Test Person",
+          "emails": [
+            "test@test.com"
+          ],
+          "isEnabled": true,
+          "isAdministrator": true,
+          "status": 3
+        }
+      ],
+      "logDescription": null
+    },
+    {
+      "id": 78179,
+      "entityType": "Activities",
+      "rev": "5",
+      "modifiedTime": "2024-03-20T22:50:07+0000",
+      "createdTime": "2024-02-22T17:19:39+0000",
+      "name": "BRIEF 101 Training:  Going Deeper with BRIEF (Cohort 3)",
+      "description": "Going Deeper with BRIEF",
+      "activityType": {
+        "stub": true,
+        "id": 2,
+        "rev": "7",
+        "entityType": "Activity_Types",
+        "name": "Quotes Sent"
+      },
+      "lead": null,
+      "leads": [],
+      "startTime": "2024-06-13T13:00:00+0000",
+      "endTime": "2024-06-13T15:30:00+0000",
+      "isAllDay": false,
+      "isTimed": true,
+      "isFlagged": false,
+      "status": -1,
+      "loggedBy": null,
+      "participants": [
+        {
+          "stub": true,
+          "id": 156843,
+          "rev": "1",
+          "entityType": "Contacts",
+          "modifiedTime": "2024-02-21T14:52:18+0000",
+          "createdTime": "2024-02-21T14:52:18+0000",
+          "name": "Pat McEnroe",
+          "jobTitle": "",
+          "status": 3
+        },
+        {
+          "stub": true,
+          "id": 13,
+          "rev": "16",
+          "entityType": "Users",
+          "modifiedTime": "2023-09-21T16:34:56+0000",
+          "createdTime": "2016-06-29T18:23:27+0000",
+          "name": "Test Person",
+          "emails": [
+            "test@test.com"
+          ],
+          "isEnabled": true,
+          "isAdministrator": true,
+          "status": 3
+        }
+      ],
+      "logDescription": null
+    }
+  ],
+  "id": "apeye",
+  "jsonrpc": "2.0"
+}

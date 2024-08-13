@@ -1,0 +1,161 @@
+{
+  "result": [
+    {
+      "id": 15739,
+      "entityType": "Leads",
+      "rev": "85",
+      "modifiedTime": "2024-04-03T00:24:02+0000",
+      "createdTime": "2023-02-27T16:51:57+0000",
+      "name": "Lead-4686",
+      "description": "My first lead in the world",
+      "htmlUrl": "https://www.xxx.com/lead/4686",
+      "htmlUrlPath": "/lead/4686",
+      "avatarUrl": "https://app.nutshell.com/avatar/leads/v1/0/7/8/0",
+      "creator": {
+        "stub": true,
+        "id": 91,
+        "rev": "13",
+        "entityType": "Users",
+        "modifiedTime": "2024-02-28T17:04:57+0000",
+        "createdTime": "2020-01-23T21:38:20+0000",
+        "name": "Nancy Kerrigan",
+        "emails": [
+          "nancy@mail.com"
+        ],
+        "isEnabled": false,
+        "isAdministrator": false
+      },
+      "primaryAccount": {
+        "stub": true,
+        "id": 10015,
+        "rev": "8",
+        "entityType": "Accounts",
+        "modifiedTime": "2023-02-01T20:26:53+0000",
+        "createdTime": "2022-09-28T19:40:36+0000",
+        "name": "BestBuy",
+        "regions": [
+          "Tampa, FL"
+        ],
+        "relationship": "BestBuy Corporate",
+        "description": "BestBuy Corporate"
+      },
+      "milestone": {
+        "stub": true,
+        "id": 343,
+        "rev": "2",
+        "entityType": "Milestones",
+        "name": "Close - A"
+      },
+      "stageset": {
+        "stub": true,
+        "id": 71,
+        "entityType": "Stagesets",
+        "modifiedTime": "2024-03-24T21:34:55+0000",
+        "name": "Sales Pipeline 2024"
+      },
+      "activitiesCount": {
+        "0": 0,
+        "1": 1,
+        "2": 0,
+        "-1": 1
+      },
+      "status": 0,
+      "confidence": 85,
+      "completion": 90,
+      "urgency": "6",
+      "isOverdue": true,
+      "lastContactedDate": "2024-04-02T22:47:51+0000",
+      "market": {
+        "stub": true,
+        "id": 1,
+        "rev": "5",
+        "entityType": "Markets",
+        "modifiedTime": "2022-11-03T16:29:03+0000",
+        "name": "US"
+      },
+      "assignee": {
+        "stub": true,
+        "id": 59,
+        "rev": "0",
+        "entityType": "Teams",
+        "modifiedTime": "2023-12-11T19:31:32+0000",
+        "createdTime": "2023-12-11T19:31:32+0000",
+        "name": "Blue AM"
+      },
+      "sources": [],
+      "competitors": [],
+      "products": [
+        {
+          "stub": true,
+          "id": 255,
+          "rev": "3",
+          "entityType": "Products",
+          "modifiedTime": "2022-11-02T10:59:05+0000",
+          "createdTime": "2020-06-03T14:33:22+0000",
+          "name": "One day course",
+          "relationship": null,
+          "price": {
+            "currency": "USD",
+            "amount": 24999
+          },
+          "quantity": 1
+        }
+      ],
+      "contacts": [
+        {
+          "stub": true,
+          "id": 93059,
+          "rev": "8",
+          "entityType": "Contacts",
+          "modifiedTime": "2023-11-24T20:11:41+0000",
+          "createdTime": "2022-11-16T18:25:41+0000",
+          "name": "Vickie Thompson",
+          "jobTitle": "BestBuy Manager",
+          "description": "Senior Manager",
+          "relationship": "Senior Manager"
+        }
+      ],
+      "accounts": [],
+      "tags": [
+        "2023",
+        "2023"
+      ],
+      "mergedWith": null,
+      "mergedInto": [],
+      "clonedFrom": null,
+      "priority": 0,
+      "channels": [],
+      "dueTime": "2024-05-31T15:51:00+0000",
+      "nextStepDueTime": "2023-07-29T20:57:33+0000",
+      "value": {
+        "currency": "USD",
+        "amount": 24999
+      },
+      "normalizedValue": {
+        "currency": "USD",
+        "amount": 24999
+      },
+      "processes": [
+        {
+          "stub": true,
+          "id": 21247,
+          "rev": "1098",
+          "entityType": "Processes",
+          "name": "Sales Pipeline 2024",
+          "type": "0",
+          "startedTime": "2023-06-03T20:45:50+0000",
+          "closedTime": null,
+          "currentMilestoneId": "343",
+          "processTemplateId": "2175"
+        }
+      ],
+      "notes": [],
+      "estimatedValue": {
+        "currency": "USD",
+        "amount": 24999
+      }
+    }
+  ],
+  "id": "apeye",
+  "error": null
+}

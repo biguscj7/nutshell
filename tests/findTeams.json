@@ -1,0 +1,78 @@
+{
+  "result": [
+    {
+      "stub": true,
+      "id": 59,
+      "rev": "0",
+      "entityType": "Teams",
+      "modifiedTime": "2023-12-11T19:31:32+0000",
+      "createdTime": "2023-12-11T19:31:32+0000",
+      "name": "Blue AM"
+    },
+    {
+      "stub": true,
+      "id": 55,
+      "rev": "0",
+      "entityType": "Teams",
+      "modifiedTime": "2023-12-11T19:31:23+0000",
+      "createdTime": "2023-12-11T19:31:23+0000",
+      "name": "Blue BD"
+    },
+    {
+      "stub": true,
+      "id": 67,
+      "rev": "0",
+      "entityType": "Teams",
+      "modifiedTime": "2023-12-11T19:31:54+0000",
+      "createdTime": "2023-12-11T19:31:54+0000",
+      "name": "Gray BD"
+    },
+    {
+      "stub": true,
+      "id": 63,
+      "rev": "0",
+      "entityType": "Teams",
+      "modifiedTime": "2023-12-11T19:31:44+0000",
+      "createdTime": "2023-12-11T19:31:44+0000",
+      "name": "Orange BD"
+    },
+    {
+      "stub": true,
+      "id": 51,
+      "rev": "0",
+      "entityType": "Teams",
+      "modifiedTime": "2023-12-11T19:31:12+0000",
+      "createdTime": "2023-12-11T19:31:12+0000",
+      "name": "USG IS"
+    },
+    {
+      "stub": true,
+      "id": 47,
+      "rev": "0",
+      "entityType": "Teams",
+      "modifiedTime": "2023-12-11T19:31:00+0000",
+      "createdTime": "2023-12-11T19:31:00+0000",
+      "name": "White AM"
+    },
+    {
+      "stub": true,
+      "id": 43,
+      "rev": "0",
+      "entityType": "Teams",
+      "modifiedTime": "2023-12-11T19:30:50+0000",
+      "createdTime": "2023-12-11T19:30:50+0000",
+      "name": "White BD"
+    },
+    {
+      "stub": true,
+      "id": 39,
+      "rev": "0",
+      "entityType": "Teams",
+      "modifiedTime": "2023-12-11T19:30:34+0000",
+      "createdTime": "2023-12-11T19:30:34+0000",
+      "name": "White IS"
+    }
+  ],
+  "id": "apeye",
+  "jsonrpc": "2.0"
+}
