@@ -2,3 +2,4 @@
 /.env
 dist
 timing_test.py
+.idea
