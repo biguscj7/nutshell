@@ -66,7 +66,20 @@ class FindUsers(_APIMethod):
 
 
 class GetUser(_APIMethod):
-    """For retrieving a single user from the Nutshell API."""
+    """For retrieving a single user from the Nutshell API.
+    
+    Attributes
+    ----------
+    user_id : int
+        The ID of the user to retrieve.
+    rev : str
+        The revision of the user to retrieve.
+        
+    Computed Attributes
+    -------------------
+    params : dict
+        A dictionary of the parameters to be passed to the API.
+    """
     user_id: int = None  # with no user_id, the API will return the current user
     rev: str = None  # included to match API documentation
     api_method: str = "getUser"
@@ -83,7 +96,24 @@ class GetUser(_APIMethod):
 
 
 class FindTeams(_APIMethod):
-    """For retrieving a list of teams from the Nutshell API."""
+    """For retrieving a list of teams from the Nutshell API.
+    
+    Attributes
+    ----------
+    order_by : str
+        The field to order the results by.
+    order_direction : str
+        The direction to order the results by.
+    limit : int
+        The maximum number of results to return.
+    page : int
+        The page of results to return.
+    
+    Computed Attributes
+    -------------------
+    params : dict
+        A dictionary of the parameters to be passed to the API.
+    """
     order_by: str = "name"
     order_direction: str = "ASC"
     limit: int = 50
@@ -104,7 +134,24 @@ class FindTeams(_APIMethod):
 
 
 class FindActivityTypes(_APIMethod):
-    """For retrieving a list of activity types from the Nutshell API."""
+    """For retrieving a list of activity types from the Nutshell API.
+    
+    Attributes
+    ----------
+    order_by : str
+        The field to order the results by.
+    order_direction : str
+        The direction to order the results by.
+    limit : int
+        The maximum number of results to return.
+    page : int
+        The page of results to return.
+        
+    Computed Attributes
+    -------------------
+    params : dict
+        A dictionary of the parameters to be passed to the API.
+    """
     order_by: str = "name"
     order_direction: str = "ASC"
     limit: int = 50
@@ -125,7 +172,24 @@ class FindActivityTypes(_APIMethod):
 
 
 class GetAnalyticsReport(_APIMethod):
-    """For building a valid query to the Nutshell API for the getAnalyticsReport method."""
+    """For building a valid query to the Nutshell API for the getAnalyticsReport method.
+    
+    Attributes
+    ----------
+    report_type : AnalyticsReportType
+        The type of report to retrieve.
+    period : str
+        The period of the report to retrieve.
+    filters : Optional[list[User | Team | ActivityType]]
+        A list of entities to filter the report by.
+    options : list[dict]
+        A list of options to pass to the API.
+    
+    Computed Attributes
+    -------------------
+    params : dict
+        A dictionary of the parameters to be passed to the API.
+    """
     report_type: AnalyticsReportType
     period: str
     filters: Optional[list[User | Team | ActivityType]] = None
@@ -145,6 +209,24 @@ class GetAnalyticsReport(_APIMethod):
 
 
 class FindStagesets(_APIMethod):
+    """For retreiving a list of pipelines (stagesets) from the Nutshell API.
+    
+    Attributes
+    ----------
+    order_by : str
+        The field to order the results by.
+    order_direction : str
+        The direction to order the results by.
+    limit : int
+        The maximum number of results to return.
+    page : int
+        The page of results to return.
+    
+    Computed Attributes
+    -------------------
+    params : dict
+        A dictionary of the parameters to be passed to the API.
+    """
     order_by: str = "name"
     order_direction: str = "ASC"
     limit: int = 50
@@ -164,6 +246,24 @@ class FindStagesets(_APIMethod):
 
 
 class FindMilestones(_APIMethod):
+    """For retrieving a list of milestones from the Nutshell API.
+    
+    Attributes
+    ----------
+    order_by : str
+        The field to order the results by.
+    order_direction : str
+        The direction to order the results by.
+    limit : int
+        The maximum number of results to return.
+    page : int
+        The page of results to return.
+    
+    Computed Attributes
+    -------------------
+    params : dict
+        A dictionary of the parameters to be passed to the API
+    """
     order_by: str = "name"
     order_direction: str = "ASC"
     limit: int = 50
@@ -183,6 +283,27 @@ class FindMilestones(_APIMethod):
 
 
 class FindLeads(_APIMethod):
+    """For retrieving a list of leads from the Nutshell API.
+    
+    Attributes
+    ----------
+    query : Optional[FindLeadsQuery]
+        A query object to filter the results.
+    order_by : str
+        The field to order the results by.
+    order_direction : str
+        The direction to order the results by.
+    limit : int
+        The maximum number of results to return.
+    page : int
+        The page of results to return.
+    stub_responses : bool
+        Whether to return stub responses.
+    
+    Computed Attributes
+    -------------------
+    params : dict
+        A dictionary of the parameters to be passed to the API."""
     query: Optional[FindLeadsQuery] = None
     order_by: str = "id"
     order_direction: str = "ASC"
@@ -209,6 +330,27 @@ class FindLeads(_APIMethod):
 
 # TODO: add findActivities
 class FindActivities(_APIMethod):
+    """For retrieving a list of activities from the Nutshell API.
+    
+    Attributes
+    ----------
+    query : Optional[FindActivitiesQuery]
+        A query object to filter the results.
+    order_by : str
+        The field to order the results by.
+    order_direction : str
+        The direction to order the results by.
+    limit : int
+        The maximum number of results to return.
+    page : int
+        The page of results to return.
+    stub_responses : bool
+        Whether to return stub responses.
+    
+    Computed Attributes
+    -------------------
+    params : dict
+        A dictionary of the parameters to be passed to the API."""
     query: Optional[FindActivitiesQuery] = None
     order_by: str = "name"
     order_direction: str = "ASC"
@@ -246,6 +388,17 @@ class NewActivity(_APIMethod):
 
 
 class GetActivity(_APIMethod):
+    """For retrieving a single activity from the Nutshell API.
+    
+    Attributes
+    ----------
+    activity_id : int
+        The ID of the activity to retrieve.
+    
+    Computed Attributes
+    -------------------
+    params : dict
+        A dictionary of the parameters to be passed to the API"""
     activity_id: int
     api_method: str = "getActivity"
 
