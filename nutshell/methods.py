@@ -411,6 +411,21 @@ class GetActivity(_APIMethod):
 
 
 class EditActivity(_APIMethod):
+    """For editing an activity in the Nutshell API.
+    
+    Attributes
+    ----------
+    activity_id : int
+        The ID of the activity to edit.
+    rev : str
+        The revision of the activity to edit.
+    activity : dict
+        The updated activity data.
+    
+    Computed Attributes
+    -------------------
+    params : dict
+        A dictionary of the parameters to be passed to the API"""
     activity_id: int
     rev: str
     activity: dict
@@ -427,6 +442,19 @@ class EditActivity(_APIMethod):
 
 
 class DeleteActivity(_APIMethod):
+    """For deleting an activity from the Nutshell API.
+    
+    Attributes
+    ----------
+    activity_id : int
+        The ID of the activity to delete.
+    rev : str
+        The revision of the activity to delete.
+    
+    Computed Attributes
+    -------------------
+    params : dict
+        A dictionary of the parameters to be passed to the API"""
     activity_id: int
     rev: str
     api_method: str = "deleteActivity"
