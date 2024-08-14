@@ -1,7 +1,8 @@
 # Nutshell API
 
-This is a work-in-progress attempt at a pythonic API for querying the Nutshell CRM API. It does not yet support
-modifying data in a Nutshell instance.
+This is a work-in-progress attempt at a pythonic API for querying the Nutshell CRM API. The bulk of the methods only
+read
+data, except a few methods for editing activities.
 
 ## Installation
 
