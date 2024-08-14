@@ -26,10 +26,7 @@ class NutshellAPI:
 
     @api_calls.setter
     def api_calls(self, calls: Sequence[_APIMethod] | _APIMethod):
-        if isinstance(calls, _APIMethod):
-            self._api_calls = [calls]
-        else:
-            self._api_calls = calls
+        self._api_calls = [calls] if isinstance(calls, _APIMethod) else calls
 
     def call_api(self):
         responses = asyncio.run(self._calling_api())
@@ -39,8 +36,7 @@ class NutshellAPI:
     async def _calling_api(self):
         tasks = []
         async with aiohttp.ClientSession() as session:
-            for call in self._api_calls:
-                tasks.append(self._fetch_report(session, call))
+            tasks.extend(self._fetch_report(session, call) for call in self._api_calls)
             responses = await asyncio.gather(*tasks)
 
         return responses
@@ -51,8 +47,7 @@ class NutshellAPI:
                    "method": call.api_method,
                    "params": call.params}
         async with session.post(self.URL, auth=self.auth, json=payload, ) as resp:
-            info = await resp.json()
-            return info
+            return await resp.json()
 
     def _map_results(self, results: list[dict]) -> _APIResponse | list[_APIResponse]:
         call_responses = []
@@ -84,7 +79,4 @@ class NutshellAPI:
                     call_responses.append(EditActivityResult(**results[idx]))
                 case "deleteActivity":
                     call_responses.append(DeleteActivityResult(**results[idx]))
-        if len(call_responses) == 1:
-            return call_responses[0]
-        else:
-            return call_responses
+        return call_responses[0] if len(call_responses) == 1 else call_responses
