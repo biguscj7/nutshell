@@ -3,6 +3,7 @@ import pytest
 
 from pytest import mark
 
+from methods import GetLead
 from nutshell.entities import FindLeadsQueryFilter, FindLeadsQueryStatus, Team, User, AnalyticsReportType, \
     ActivityStatus, CreateActivity
 from nutshell.methods import FindUsers, GetUser, GetAnalyticsReport, FindTeams, FindActivityTypes, \
@@ -196,10 +197,10 @@ def test_get_activity():
 
 
 def test_get_lead():
-    get_lead = EditLead(lead_id=1)
+    get_lead = GetLead(lead_id=1)
 
     assert get_lead.params == {"leadId": 1}
-    
+
 
 def test_edit_lead():
     edit_lead = EditLead(lead_id=1, rev="1", lead={"name": "New Name"})
