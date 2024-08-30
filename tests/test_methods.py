@@ -7,7 +7,7 @@ from nutshell.entities import FindLeadsQueryFilter, FindLeadsQueryStatus, Team, 
     ActivityStatus, CreateActivity
 from nutshell.methods import FindUsers, GetUser, GetAnalyticsReport, FindTeams, FindActivityTypes, \
     FindStagesets, FindMilestones, FindLeads, FindLeadsQuery, FindActivities, FindActivitiesQuery, EditActivity, \
-    NewActivity, GetActivity
+    NewActivity, GetActivity, EditLead
 
 
 def test_find_users_query():
@@ -193,3 +193,15 @@ def test_get_activity():
     get_activity = GetActivity(activity_id=1)
 
     assert get_activity.params == {"activityId": 1}
+
+
+def test_get_lead():
+    get_lead = EditLead(lead_id=1)
+
+    assert get_lead.params == {"leadId": 1}
+    
+
+def test_edit_lead():
+    edit_lead = EditLead(lead_id=1, rev="1", lead={"name": "New Name"})
+
+    assert edit_lead.params == {"leadId": 1, "rev": "1", "lead": {"name": "New Name"}}

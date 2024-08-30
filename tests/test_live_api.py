@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from nutshell.nutshell_api import NutshellAPI
 from nutshell.methods import FindUsers, GetUser, FindTeams, FindActivityTypes, GetAnalyticsReport, FindStagesets, \
     FindMilestones, \
-    FindLeads, FindActivities
+    FindLeads, FindActivities, GetLead
 from nutshell.entities import Lead, User, Team, ActivityType, AnalyticsReport, TimeSeriesData, Stageset, Milestone, \
     AnalyticsReportType, Activity
 
@@ -108,3 +108,11 @@ def test_find_activities(api):
     find_activities_result = api.call_api().result
     assert isinstance(find_activities_result, list)
     assert isinstance(find_activities_result[0], Activity)
+
+
+@pytest.mark.live_api
+def test_get_lead(api):
+    get_lead = GetLead(lead_id=23195)  # need a valid lead_id, will be dependent on your instance of Nutshell
+    api.api_calls = get_lead
+    get_lead_result = api.call_api().result
+    assert isinstance(get_lead_result, Lead)

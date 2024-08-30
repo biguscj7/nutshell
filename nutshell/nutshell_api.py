@@ -7,7 +7,8 @@ import aiohttp
 from nutshell.methods import _APIMethod
 from nutshell.responses import FindUsersResult, GetUserResult, GetAnalyticsReportResult, FindTeamsResult, \
     FindActivityTypesResult, _APIResponse, FindStagesetsResult, FindMilestonesResult, FindLeadsResult, \
-    FindActivitiesResult, EditActivityResult, NewActivityResult, GetActivityResult, DeleteActivityResult
+    FindActivitiesResult, EditActivityResult, NewActivityResult, GetActivityResult, DeleteActivityResult, GetLeadResult, \
+    EditLeadResult
 
 _MethodResponse = namedtuple("MethodResponse", ["method", "response"])
 
@@ -79,4 +80,8 @@ class NutshellAPI:
                     call_responses.append(EditActivityResult(**results[idx]))
                 case "deleteActivity":
                     call_responses.append(DeleteActivityResult(**results[idx]))
+                case "getLead":
+                    call_responses.append(GetLeadResult(**results[idx]))
+                case "editLead":
+                    call_responses.append(EditLeadResult(**results[idx]))
         return call_responses[0] if len(call_responses) == 1 else call_responses

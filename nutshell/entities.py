@@ -1,3 +1,7 @@
+"""
+This module contains Enums as well as pydantic models for various entities in the Nutshell API
+"""
+
 from __future__ import annotations
 
 from enum import StrEnum, IntEnum
@@ -8,12 +12,14 @@ from pydantic import BaseModel, computed_field, Field
 
 class AnalyticsReportType(StrEnum):
     """
-    Enum for the type of analytics report to generate.
+    Enumeration of analytics report types available in the system.
+
+    This enum is used to specify the type of report to generate or analyze.
 
     Attributes
     ----------
-    EFFORT : Effort report.
-    PIPELINE : Pipeline report.
+    EFFORT : str
+    PIPELINE : str
     """
     EFFORT = "Effort"
     PIPELINE = "Pipeline"
@@ -29,6 +35,7 @@ class FindLeadsQueryStatus(IntEnum):
     CANCELLED : Cancelled status.
     LOST : Lost status.
     WON : Won status.
+    
     """
     OPEN = 0
     CANCELLED = 12
@@ -46,6 +53,7 @@ class FindLeadsQueryFilter(IntEnum):
     MY_LEADS : My leads filter.
     MY_TEAM_LEADS : My team leads filter.
     ALL_LEADS : All leads filter.
+    
     """
     MY_LEADS = 0
     MY_TEAM_LEADS = 1
@@ -56,13 +64,13 @@ class ActivityStatus(IntEnum):
     """
     Enum for the status of an activity.
 
-    ...
     Attributes
     ----------
     SCHEDULED : Scheduled status.
     LOGGED : Logged status.
     CANCELLED : Cancelled status.
     OVERDUE: Overdue status.
+    
     """
     SCHEDULED = 0
     LOGGED = 1
@@ -71,37 +79,7 @@ class ActivityStatus(IntEnum):
 
 
 class User(BaseModel):
-    """
-    Represents a user in the Nutshell API.
-
-    ...
-    Attributes
-    ----------
-    stub : bool
-        Whether the user info is a stub.
-    id : int
-        The id of the User object.
-    entity_type : str
-        The entity type (Users).
-    rev : str
-        The revision of the User object.
-    name : str
-        The name of the user.
-    first_name : str
-        The first name of the user.
-    last_name : str
-        The last name of the user.
-    is_enabled : bool
-        Whether the user is enabled.
-    is_administrator : bool
-        Whether the user is an administrator.
-    emails : list[str]
-        The emails associated with the user.
-    modified_time : str
-        The time of last modification of the user.
-    created_time : str
-        The time the user was created.
-    """
+    """Model of a Nutshell User"""
     stub: bool = None
     id: int
     entity_type: str = Field(..., alias="entityType", pattern=r"Users")
@@ -117,27 +95,7 @@ class User(BaseModel):
 
 
 class Team(BaseModel):
-    """
-    Represents a team object from the Nutshell API.
-
-    ...
-    Attributes
-    ----------
-    stub : bool
-        Whether the team info is a stub.
-    id : int
-        The id of the Team object.
-    name : str
-        The name of the team.
-    rev : str
-        The revision of the Team object.
-    entity_type : str
-        The entity type (Teams).
-    modified_time : str
-        The time of last modification of the team.
-    created_time : str
-        The time the team was created.
-    """
+    """Model of a Nutshell Team"""
     stub: bool
     id: int
     name: str
@@ -148,23 +106,7 @@ class Team(BaseModel):
 
 
 class ActivityType(BaseModel):
-    """
-    Represents an activity type object from the Nutshell API.
-
-    ...
-    Attributes
-    ----------
-    stub : bool
-        Whether the activity type info is a stub.
-    id : int
-        The id of the ActivityType object.
-    rev : str
-        The revision of the ActivityType object.
-    entity_type : str
-        The entity type (Activity_Types).
-    name : str
-        The name of the activity type.
-    """
+    """Model of a Nutshell Activity Type"""
     stub: bool
     id: int
     rev: str
@@ -174,45 +116,13 @@ class ActivityType(BaseModel):
 
 
 class TimeSeriesData(BaseModel):
-    """
-    Represents the time series data for an analytics report response.
-
-    ...
-    Attributes
-    ----------
-    total_effort : list[list[int]]
-        The total effort data.
-    successful_effort : list[list[int]]
-        Only the successful effort data.
-    """
+    """Model of the Time Series Data for an Analytics Report"""
     total_effort: list[list[int]]
     successful_effort: list[list[int]]
 
 
 class SummaryData(BaseModel):
-    """
-    Represents the summary data for an analytics report response.
-
-    ...
-    Attributes
-    ----------
-    sum : float
-        The sum value.
-    avg : float
-        The average value.
-    min : float
-        The minimum value.
-    max : float
-        The maximum value.
-    sum_delta : float
-        The sum delta value.
-    avg_delta : float
-        The average delta value.
-    min_delta : float
-        The minimum delta value.
-    max_delta : float
-        The maximum delta value.
-    """
+    """Model of the Summary Data for an Analytics Report"""
     sum: float
     avg: float
     min: float
@@ -224,21 +134,7 @@ class SummaryData(BaseModel):
 
 
 class AnalyticsReport(BaseModel):
-    """
-    Represents an analytics report response from the Nutshell API.
-
-    ...
-    Attributes
-    ----------
-    series_data : TimeSeriesData
-        The time series data.
-    summary_data : dict[str, SummaryData]
-        The summary data.
-    period_description : str
-        The human-readable period description.
-    delta_period_description : str
-        The human-readable delta period description.
-    """
+    """Model for constructing a Nutshell Analytics Report"""
     series_data: TimeSeriesData = Field(..., alias="seriesData")
     summary_data: dict[str, SummaryData] = Field(..., alias="summaryData")
     period_description: str = Field(..., alias="periodDescription")
@@ -246,23 +142,7 @@ class AnalyticsReport(BaseModel):
 
 
 class Stageset(BaseModel):
-    """
-    Represents a stageset object from the Nutshell API.
-
-    ...
-    Attributes
-    ----------
-    id : int
-        The id of the Stageset object.
-    entity_type : str
-        The entity type (Stagesets).
-    name : str
-        The name of the stageset.
-    default : int
-        The default value.
-    position : int
-        The position value.
-    """
+    """Model of a Nutshell Stageset (Pipeline) """
     id: int
     entity_type: str = Field(..., alias="entityType", pattern=r"Stagesets")
     name: str
@@ -271,25 +151,7 @@ class Stageset(BaseModel):
 
 
 class Milestone(BaseModel):
-    """
-    Represents a milestone object from the Nutshell API.
-
-    ...
-    Attributes
-    ----------
-    id : int
-        The id of the Milestone object.
-    entity_type : str
-        The entity type (Milestones).
-    rev : str
-        The revision of the Milestone object.
-    name : str
-        The name of the milestone.
-    position : int
-        The position value.
-    stageset_id : int
-        The stageset id.
-    """
+    """Model of a Nutshell Milestone"""
     id: int
     entity_type: str = Field(..., alias="entityType", pattern=r"Milestones")
     rev: str
@@ -299,24 +161,7 @@ class Milestone(BaseModel):
 
 
 class Lead(BaseModel):
-    """
-    Represents a lead object from the Nutshell API.
-
-    ...
-    Attributes
-    ----------
-    stub : bool
-        Whether the lead info is a stub.
-    id : int
-        The id of the Lead object.
-    entity_type : str
-        The entity type (Leads).
-    rev : str
-        The revision of the Lead object.
-    name : str
-        The name of the lead.
-
-    """
+    """Model of a Nutshell Lead"""
     stub: Optional[bool] = None
     id: int
     entity_type: str = Field(..., alias="entityType", pattern=r"Leads")
@@ -337,61 +182,11 @@ class Lead(BaseModel):
     normalized_value: Optional[dict[str, float | str]] = Field(None, alias="normalizedValue")
     products: Optional[list[dict]] = None
     primary_account: Optional[dict] = Field(None, alias="primaryAccount")
+    custom_fields: Optional[dict] = Field(None, alias="customFields")
 
 
 class Activity(BaseModel):
-    """
-    Represents an activity object from the Nutshell API.
-
-    ...
-    Attributes
-    ----------
-    id : int
-        The id of the Activity object.
-    entity_type : str
-        The entity type (Activities).
-    rev : str
-        The revision of the Activity object.
-    name : str
-        The name of the activity.
-    description : str
-        The description of the activity.
-    activity_type : ActivityType
-        The activity type.
-    lead : Lead
-        The lead associated with the activity.
-    leads : list[Lead]
-        The leads associated with the activity.
-    start_time : str
-        The start time of the activity.
-    end_time : str
-        The end time of the activity.
-    is_all_day : bool
-        Whether the activity is all day.
-    is_flagged : bool
-        Whether the activity is flagged.
-    status : int
-        The status of the activity.
-    log_description : str
-        The log description of the activity.
-    log_note : dict
-        The log note of the activity.
-    logged_by : dict[str, str | int]
-        The user who logged the activity.
-    participants : list
-        The participants of the activity.
-    follow_up : dict
-        The follow up of the activity.
-    follow_up_to : dict
-        The follow up to of the activity.
-    deleted_time : str
-        The time the activity was deleted.
-    modified_time : str
-        The time the activity was last modified.
-    created_time : str
-        The time the activity was created.
-
-    """
+    """Model of a Nutshell Activity"""
     id: int
     stub: Optional[bool] = None
     entity_type: str = Field(..., alias="entityType", pattern=r"Activities")
@@ -418,33 +213,8 @@ class Activity(BaseModel):
 
 
 class CreateActivity(BaseModel):
-    """
-    Minimal class for creating an activity in the Nutshell API. serialization_alias used as this class should only be
-    used to create a new activity.
-    
-    ...
-    Attributes:
-        name : str
-            The name of the activity.
-        description : str
-            The description of the activity.
-        activity_type_id : int
-            The activity type id.
-        leads : list[Lead]
-            The leads associated with the activity.
-        start_time : str
-            The start time of the activity.
-        end_time : str
-            The end time of the activity.
-        is_all_day : bool
-            Whether the activity is all day.
-        is_flagged : bool
-            Whether the activity is flagged.
-        status : int
-            The status of the activity.
-        participants : list
-            The participants of the activity.
-    """
+    """Minimal class for creating an activity in the Nutshell API. serialization_alias used as this class should only be
+    used to create a new activity"""
 
     name: str = None
     description: str = None
@@ -459,34 +229,7 @@ class CreateActivity(BaseModel):
 
 
 class FindLeadsQuery(BaseModel):
-    """
-    For building a valid query for the findLeads method.
-
-    ...
-    Attributes:
-        status : FindLeadsQueryStatus
-            The status of the leads.
-        filter : FindLeadsQueryFilter
-            The filter to apply to the leads query.
-        milestone_id : int
-            The milestone id.
-        milestone_ids : list[int]
-            The milestone ids.
-        stageset_id : int
-            The stageset id.
-        stageset_ids : list[int]
-            The stageset ids.
-        due_time : str
-            The due time of the leads.
-        assignee : list[User | Team]
-            The assignee of the leads.
-        number : int
-            The number of leads.
-
-    Computed Attributes:
-        query : dict
-            A correctly formed query dictionsary for the findLeads method.
-    """
+    """Model for building a FindLeads query"""
     status: Optional[FindLeadsQueryStatus] = None
     filter: Optional[FindLeadsQueryFilter] = None
     milestone_id: Optional[int] = None
@@ -527,31 +270,7 @@ class FindLeadsQuery(BaseModel):
 
 
 class FindActivitiesQuery(BaseModel):
-    """
-    For building a valid query for the findActivities method.
-
-    ...
-    Attributes
-    ----------
-    lead_id:
-        An optional lead ID that the activity is associated with
-    contact_id:
-        An optional array of contact IDs who are participants in the activity
-    account_id:
-        An optional array of account IDs who are participants in the activity
-    user_id:
-        An optional array of user IDs who are participants in the activity
-    status:
-        An optional ActivityStatus enum value
-    activity_type_id:
-        An optional array of activity type IDs
-    is_flagged:
-        An optional boolean for filtering by the "Important" flag
-    start_time:
-        An optional date or time to compare against the start time, prefixed by a comparison operator (either "<", ">", "=", ">=", or "<=").
-    end_time:
-        An optional date or time to compare against the end time, prefixed by a comparison operator (either "<", ">", "=", ">=", or "<=").
-    """
+    """Model for building a FindActivities query"""
     lead_id: Optional[int] = None
     contact_id: Optional[list[int]] = None
     account_id: Optional[list[int]] = None
