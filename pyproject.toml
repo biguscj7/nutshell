@@ -20,7 +20,7 @@ pydantic = "^2.6.4"
 coverage = "^7.5.4"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.1.1"
+pytest = ">=8.1.1,<10.0.0"
 python-dotenv = "^1.0.1"
 rich = "^13.7.1"
 sphinx = "^8.0.2"
